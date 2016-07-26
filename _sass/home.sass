@@ -40,28 +40,24 @@ html,body
       .intro-header
         .into-header-text
           color: white
-          font-size: 7em
-          text-align: left
-          width: 50%
-          word-break: break-word
-          line-height: 150px
+          font-size: 9em
+          text-align: center
       .caption
-        margin: 30px 0
+        margin: 60px 0 50px
         color: white
-        font-size: 2.5em
-        .intro-date
+        .intro-caption
           display: block
+          font-size: 3.2em
+          transform: uppercase
           font-family: 'Gotham-Light'
-        .intro-location
-          display: block
-          margin-top: 15px
-          font-family: 'Gotham-Medium'
+          text-align: center
+
       .intro-button-container
-        margin: 30px 0
+        margin: 30px auto
         .intro-button
-          background-color: white
-          color: black
-          font-size: 16px
+          margin: 0 auto
+          color: white
+          font-size: 2em
           display: block
           width: fit-content
           padding: 30px 60px
@@ -69,221 +65,167 @@ html,body
           transition: all 0.3s ease
           -webkit-transition: all 0.3s ease
           -o-transition: all 0.3s ease
+          outline: none
+          border: 2px dashed white
+          border-radius: 15px
 
-#the-beginning
-  position: relative
-  height: 100vh
-  .section-container
-    height: inherit
-    .left-section
-      padding-left: 15px
-      padding-right: 15px
-      float: left
-      width: 50%
-      background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) ), url('img/the-beginning-bg.jpg')
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center center
-      height: inherit
-      .content-container
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-        -moz-transform: translateY(-50%)
-        -ms-transform: translateY(-50%)
-        -o-transform: translateY(-50%)
-        .content-header
-          letter-spacing: 10px
-          font-size: 5em
-          margin: 0
-          text-align: center
-    .right-section
-      background-color: #f7f7f7
-      padding-left: 15px
-      padding-right: 15px
-      float: left
-      width: 50%
-      height: inherit
-      .content-container
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-        -moz-transform: translateY(-50%)
-        -ms-transform: translateY(-50%)
-        -o-transform: translateY(-50%)
-        .content-header
-          font-size: 5.5em
-          text-align: center
-        .content-description
-          max-width: 80%
-          margin: 50px auto 0
-          .content-text
-            color: #777777
-            font-size: 1.5em
-            line-height: 2.5em
 
-#couple
+#our-story
+  background-color: black
   position: relative
-  height: 100vh
-  .section-container
-    height: inherit
-    .left-section
-      float: left
-      height: inherit
-      width: 50%
-      background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('img/groom.jpg')
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center center
-    .content-header-container
+  .timeline-section
+    position: relative
+    &:before
+      content: ''
       position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      -moz-transform: translateY(-50%)
-      -ms-transform: translateY(-50%)
-      -o-transform: translateY(-50%)
+      top: 50px
+      height: 80%
+      width: 4px
+      border-right: 1px dashed #ccc
       left: 0
       right: 0
-      .content-header
+      margin-left: auto
+      margin-right: auto
+    .timeline-block
+      position: relative
+      margin: 100px auto
+      .timeline-img
+        background-color: black
+        position: absolute
+        border: 3px dotted white
+        padding: 5px
+        width: 250px
+        height: 250px
+        top: 40px
+        left: 0
+        right: 0
+        margin-left: auto
+        margin-right: auto
+        border-radius: 50%
+        img
+          display: block
+          width: 100%
+          height: 100%
+          position: relative
+          border-radius: 50%
+      .timeline-content
+        position: relative
+        border-radius: 0.25em
+        color: #777
+        padding: 20px 40px
+        width: 39%
+        margin-left: 0
+        h2
+          letter-spacing: 5px
+          color: white
+          font-size: 2.5em
+          font-weight: normal
+          font-style: normal
+        p
+          color: white
+          font-size: 16px
+          font-weight: normal
+          margin: 1em 0
+          line-height: 1.7em
+    .circle-shape
+      background: #FF5252
+      box-shadow: 0 0 0 8px white
+      width: 150px
+      height: 150px
+      position: relative
+      top: 40px
+      left: 0
+      right: 0
+      margin-left: auto
+      margin-right: auto
+      border-radius: 50%
+      h2
+        font-family: "Montserrat", "sans-serif"
+        text-transform: uppercase
+        letter-spacing: 0px
+        font-weight: normal
+        font-style: normal
         text-align: center
-        font-size: 7em
-        letter-spacing: 10px
-    .right-section
-      float: left
-      height: inherit
-      width: 50%
-      background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('img/bride.jpg')
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center center
-
-#wedding-detail
-  position: relative
-  height: 100vh
-  .section-container
-    height: inherit
-    .left-section
-      background-color: #f7f7f7
-      padding-left: 15px
-      padding-right: 15px
-      float: left
-      width: 50%
-      height: inherit
-      .content-container
+        color: white
+        font-size: 1.3em
         position: relative
         top: 50%
         transform: translateY(-50%)
-        -moz-transform: translateY(-50%)
-        -ms-transform: translateY(-50%)
-        -o-transform: translateY(-50%)
-        .content-header
-          font-size: 5.5em
-          text-align: center
-          letter-spacing: 10px
-        .content-description
-          max-width: 80%
-          margin: 50px auto 0
-          .content-text
-            color: #777777
+    &:after
+      content: ''
+      display: table
+      clear: both
+
+#venue
+  background-color: black
+  .content-container
+    padding: 20px 30px
+    border: 3px dashed #FFFFFF
+    border-radius: 50px
+    text-align: center
+    color: white
+    margin: 50px 50px 100px
+    .section-content
+      margin: 50px 0px
+      .section-header
+        text-transform: capitalize
+        margin: 30px 0
+        font-size: 4em
+      ul
+        list-style: none
+        padding-left: 0
+        li
+          margin: 10px 0
+          b
             font-size: 1.5em
-            line-height: 2.5em
-
-    .right-section
-      padding-left: 15px
-      padding-right: 15px
-      float: left
-      width: 50%
-      background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) ), url('img/the-beginning-bg.jpg')
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center center
-      height: inherit
-      .content-container
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-        -moz-transform: translateY(-50%)
-        -ms-transform: translateY(-50%)
-        -o-transform: translateY(-50%)
-        .content-header
-          font-size: 5em
-          margin: 0
-          text-align: center
 
 #rsvp
   position: relative
-  height: 100vh
-  .section-container
-    height: inherit
-    .left-section
-      padding-left: 15px
-      padding-right: 15px
-      float: left
-      width: 50%
-      background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('img/rsvp-bg.jpg')
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center center
-      height: inherit
-      .content-container
-        position: relative
-        top: 50%
-        transform: translateY(-50%)
-        -moz-transform: translateY(-50%)
-        -ms-transform: translateY(-50%)
-        -o-transform: translateY(-50%)
-        .content-header
-          letter-spacing: 10px
-          font-size: 5em
-          margin: 0
-          text-align: center
-    .right-section
-      background-color: #f7f7f7
-      padding-left: 15px
-      padding-right: 15px
-      float: left
-      width: 50%
-      height: inherit
-      .content-container
-        position: relative
-        max-width: 85%
-        min-width: 85%
-        margin: 0 auto
-        top: 50%
-        transform: translateY(-50%)
-        -moz-transform: translateY(-50%)
-        -ms-transform: translateY(-50%)
-        -o-transform: translateY(-50%)
-        #form-content
-          .form-item
-            .content-title
-              font-size: 3em
-              letter-spacing: 5px
-              display: block
-            .content-input
-              display: block
-              color: #777777
-              background-color: transparent
-              outline: none
-              border-top: 0
-              border-left: 0
-              border-right: 0
-              border-bottom: 1px solid #a4a4a4
-              border-radius: 0 !important
-              box-shadow: none
-              -webkit-appearance: none
-              margin-bottom: 30px
-          .content-button-container
-            .submit-button
-              outline: none
-              background: transparent
-              border: 1px solid #a4a4a4
-              display: inline-block
-              padding: 20px 30px
-              margin-top: 30px
-              font-size: 1.5em
-
-
+  background-color: black
+  .section-header
+    h1
+      text-transform: none
+      font-size: 3em
+      text-align: center
+      letter-spacing: 5px
+  .content-container
+    #form-content
+      .form-item
+        max-width: 50%
+        min-width: 50%
+        margin: 30px auto
+        .content-title
+          padding-left: 10px
+          padding-bottom: 5px
+          font-size: 1.2em
+          display: block
+          color: white
+          text-transform: uppercase
+        .content-input
+          background-color: transparent
+          outline: none
+          border: 2px dotted white
+          padding: 22px
+          border-radius: 25px
+          color: white
+        .content-number
+          max-width: 50%
+          min-width: 50%
+        .content-select
+          max-width: 50%
+          min-width: 50%
+          height: 48px
+      .content-button-container
+        max-width: 50%
+        min-width: 50%
+        margin: 50px auto
+        #ss-submit
+          background: none
+          background-color: white
+          border: none
+          padding: 25px 30px
+          line-height: 0
+          border-radius: 25px
 
 .modal.fade
   .modal-dialog
@@ -323,258 +265,9 @@ html,body
   padding: 8% 5%
   background-color: white
   .text-alert
-    margin: 20px auto
-    color: #a4a4a4
+    margin: 50px auto
+    color: black
     text-align: center
-
-@media (max-width: 1440px)
-  #cover
-    .container
-      .intro-text-container
-        .intro-header
-          .into-header-text
-            font-size: 4em
-            line-height: 100px
-            width: 30%
-        .caption
-          .intro-date
-            font-size: 24px
-          .intro-location
-            font-size: 24px
-
-  #the-beginning
-    .section-container
-      .right-section
-        .content-container
-          .content-header
-            font-size: 4.5em
-          .content-description
-            .content-text
-              font-size: 1.2em
-
-  #wedding-detail
-    .section-container
-      .left-section
-        .content-container
-          .content-header
-            font-size: 4.5em
-          .content-description
-            .content-text
-              font-size: 1.2em
-
-  #rsvp
-    .section-container
-      .right-section
-        .content-container
-          #form-content
-            .form-item
-              .content-title
-                font-size: 2.5em
-
-@media (max-width: $screen-sm-max)
-  #cover
-    .container
-      .intro-text-container
-        .intro-header
-          .into-header-text
-            font-size: 6em
-            width: 50%
-            line-height: 150px
-
-  #the-beginning
-    .section-container
-      .left-section
-        .content-container
-          .content-header
-            font-size: 3.5em
-
-  #wedding-detail
-    .section-container
-      .right-section
-        .content-container
-          .content-header
-            font-size: 3.5em
-
-  #rsvp
-    .section-container
-      .left-section
-        .content-container
-          .content-header
-            font-size: 3.5em
-
-      .right-section
-        .content-container
-          #form-content
-            .form-item
-              .content-title
-                font-size: 2.5em
-
-@media (max-width: $screen-xs-max)
-  #cover
-    .container
-      .intro-text-container
-        .intro-header
-          .into-header-text
-            font-size: 4em
-            line-height: 100px
-
-  #the-beginning
-    height: auto
-    .section-container
-      .left-section
-        height: auto
-        width: 100%
-        .content-container
-          padding: 150px 0
-          top: 0
-          transform: none
-      .right-section
-        width: 100%
-        height: auto
-        padding: 30px 0
-        .content-container
-          top: 0
-          transform: none
-          .content-header
-            font-size: 4em
-          .content-description
-            max-width: 90%
-            margin-top: 30px
-
-  #couple
-    height: auto
-    .section-container
-      .left-section
-        height: auto
-        padding: 150px 0
-        width: 100%
-      .content-header-container
-        .content-header
-          font-size: 5em
-          margin: 0
-      .right-section
-        height: auto
-        padding: 150px 0
-        width: 100%
-
-  #wedding-detail
-    height: auto
-    .section-container
-      .left-section
-        background-image: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8) ), url('img/the-beginning-bg.jpg')
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center center
-        height: auto
-        width: 100%
-        .content-container
-          padding: 150px 0
-          top: 0
-          transform: none
-          .content-header
-            font-size: 4em
-      .right-section
-        background-image: none
-        width: 100%
-        height: auto
-        padding: 30px 0
-        background-color: #f7f7f7
-        .content-container
-          top: 0
-          transform: none
-          .content-header
-            font-size: 4em
-          .content-description
-            max-width: 90%
-            margin: 30px auto 0
-            color: #777777
-            font-size: 1.2em
-            line-height: 2.5em
-
-  #rsvp
-    height: auto
-    .section-container
-      .left-section
-        width: 100%
-        .content-container
-          top: 0
-          transform: none
-          padding: 150px 0
-      .right-section
-        width: 100%
-        .content-container
-          top: 0
-          transform: none
-          padding: 50px 0
-
-@media (max-width: 568px)
-  #cover
-    .container
-      .intro-text-container
-        top: 0
-        transform: none
-        padding: 100px 0 50px
-        .intro-header
-          .into-header-text
-            text-align: center
-            width: 100%
-        .caption
-          text-align: center
-          .intro-date
-            font-size: 18px
-          .intro-location
-            font-size: 18px
-            margin-top: 5px
-
-  #the-beginning
-    .section-container
-      .left-section
-        .content-container
-          padding: 100px 0
-          .content-header
-            font-size: 2.5em
-      .right-section
-        .content-container
-          .content-header
-            font-size: 3.5em
-
-  #couple
-    .section-container
-      .content-header-container
-        .content-header
-          font-size: 2.5em
-      .left-section
-        padding: 100px 0
-      .right-section
-        padding: 100px 0
-
-  #wedding-detail
-    .section-container
-      .left-section
-        .content-container
-          padding: 100px 0
-          .content-header
-            font-size: 2.5em
-      .right-section
-        .content-container
-          .content-header
-            font-size: 3.5em
-
-  #rsvp
-    .section-container
-      .left-section
-        .content-container
-          .content-header
-            font-size: 2.5em
-      .right-section
-        .content-container
-          padding: 100px 0
-          #form-content
-            .form-item
-              .content-title
-                font-size: 1.8em
-
-
 
 
 
