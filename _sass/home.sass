@@ -240,7 +240,7 @@ html,body
     -webkit-transform: translateY(-40%)
     -ms-transform: translateY(-40%)
     -o-transform: translateY(-40%)
-    transform: translateY(-40%)
+    transform: translateY(-40%)136
     -webkit-transition: all 0.3s ease
     -moz-transition: all 0.3s ease
     -o-transition: all 0.3s ease
@@ -271,6 +271,59 @@ html,body
     margin: 50px auto
     color: black
     text-align: center
+
+@media (max-width: $screen-sm-max)
+  #cover
+    .container
+      .intro-text-container
+        .intro-header
+          .into-header-text
+            font-size: 5.5em
+        .caption
+          margin: 30px 0 15px
+          .intro-caption
+            font-size: 2.5em
+        .intro-button-container
+          .intro-button
+            font-size: 1.5em
+            padding: 20px 50px
+
+
+  #our-story
+    .timeline-section
+      margin: 100px 0
+      &:before
+        display: none
+      .timeline-block
+        margin: 50px 0
+        .timeline-img
+          position: relative
+          display: table
+          margin: 0 auto
+          top: 0
+          left: 0
+          right: 0
+        .timeline-content
+          text-align: center
+          width: 90%
+          margin: 0 auto
+          float: none !important
+
+  #venue
+    .content-container
+      margin: 0 50px 50px
+
+  #rsvp
+    .section-container
+      .content-container
+        #form-content
+          .form-item
+            max-width: 90%
+            .content-number
+              max-width: 100%
+            .content-select
+              max-width: 100%
+
 
 
 
