@@ -215,6 +215,7 @@ html,body
             max-width: 50%
             min-width: 50%
           .content-select
+            padding: 0 22px
             max-width: 50%
             min-width: 50%
             height: 48px
@@ -323,6 +324,67 @@ html,body
               max-width: 100%
             .content-select
               max-width: 100%
+
+@media (max-width: 568px)
+  #cover
+    height: auto
+    .container
+      .intro-text-container
+        top: 0
+        transform: none
+        padding: 100px 0
+        .intro-header
+          .into-header-text
+            font-size: 6.3em
+
+  #our-story
+    .timeline-section
+      .timeline-block
+        .timeline-content
+          width: 100%
+          padding-left: 5px
+          padding-right: 5px
+          text-align: left
+
+  #venue
+    .content-container
+      margin: 0
+      border-top: 2px dashed white
+      border-left: none
+      border-right: none
+      border-bottom: 2px dashed white
+      border-radius: 0
+      padding-left: 15px
+      padding-right: 15px
+      .section-content
+        .section-header
+          font-size: 3.5em
+
+  #rsvp
+    .section-container
+      .section-header
+        h1
+          font-size: 2.5em
+
+  #rsvp
+    .section-container
+      .content-container
+        #form-content
+          .content-button-container
+            max-width: 90%
+
+@media (max-width: $screen-xs)
+  #cover
+    .container
+      .intro-text-container
+        padding: 50px 0
+        .caption
+          .intro-caption
+            font-size: 2em
+
+
+
+  
 
 
 
