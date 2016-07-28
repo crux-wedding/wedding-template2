@@ -1,11 +1,7 @@
 var main = {} || "";
 
 main.init = function(){
-    main.onNavbarScroll();
-    main.onIconTransition();
-    main.initCountDown();
     main.onMenuClick();
-    main.onClickBrandLogo();
     main.onClickIntroButton();
     main.onFormSubmit();
 }
@@ -28,14 +24,14 @@ main.onFormSubmit = function (){
 }
 
 main.onClickIntroButton = function(){
-    var introButton = $(".intro-header .intro-button");
+    var introButton = $(".intro-button");
     introButton.on("click",function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
                 $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top - 80
+                    scrollTop: $($(this).attr('href')).offset().top
                 }, 700);
                 return false;
             }
