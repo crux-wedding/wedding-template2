@@ -4,7 +4,21 @@ main.init = function(){
     main.onMenuClick();
     main.onClickIntroButton();
     main.onFormSubmit();
+    main.stickyNavbar();
 }
+
+main.stickyNavbar = function () {
+    $('#header').stickyNavbar({
+        activeClass: "active",          // Class to be added to highlight nav elements
+        animDuration: 250,              // Duration of jQuery animation
+        startAt: 110,                     // Stick the menu at XXXpx from the top of the this() (nav container)
+        easing: "linear",               // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
+        zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
+        stickyModeClass: "sticky",      // Class that will be applied to 'this' in sticky mode
+        unstickyModeClass: "unsticky"   // Class that will be applied to 'this' in non-sticky mode
+    });
+}
+
 
 main.onFormSubmit = function (){
     $("#form-content").submit(function(){
@@ -60,7 +74,7 @@ main.onClickBrandLogo = function(){
 
 main.onMenuClick = function(){
     $(document).on("scroll", onScroll);
-    $('.navbar-menu a[href^="#"]').on('click', function (e) {
+    $('.navbar-menu .navbar-link[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
 
@@ -82,11 +96,11 @@ main.onMenuClick = function(){
 
     function onScroll(event){
         var scrollPos = $(document).scrollTop() + 96;
-        $('.navbar-menu a').each(function () {
+        $('.navbar-menu .navbar-link').each(function () {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
             if (refElement.position().top <= scrollPos && refElement.position().top  + refElement.height() > scrollPos) {
-                $('.navbar-menu a').removeClass("active-menu");
+                $('.navbar-menu .navbar-link').removeClass("active-menu");
                 currLink.addClass("active-menu");
             }
             else{
