@@ -12,6 +12,17 @@ markdown: kramdown
 cover:
   name: "Bonnie & Clyde"
 
+about:
+  groom:
+    groom-name: Clyde Ramos
+    groom-image: 'groom.png'
+    groom-description: "He is a great programmer who solves any problem through logic and reason. He also loves beer and a movie junkie as well. The founder of a Aestrea Software Development company, a startup and consulting company exclusively working for rocketmiles.com (a Priceline company)."
+
+  bride:
+    bride-name: Bonnie Dela Merced
+    bride-image: 'bride.png'
+    bride-description: "She is a codesigner (coder-designer), the Google Developer Group and Women Techmakers Community Lead for Cagayan de Oro. Josan's personal advocacy is inspiring women to become a techmaker. Currently, she plays around with her Gemma KIT, a Do-It-Yourslef wearable kit and travels to different places to share great things about it. She's also a UI/UX Engineer and co-founder of Aestrea Software Development."
+
 outstory:
   - title: First time we met
     image: 'http://ndesaintheme.com/ulemulem/wp-content/uploads/2015/05/newyork.jpg'

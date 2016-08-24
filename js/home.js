@@ -9,11 +9,10 @@ main.init = function(){
 
 main.stickyNavbar = function () {
     $('#header').stickyNavbar({
-        activeClass: "active",          // Class to be added to highlight nav elements
-        animDuration: 250,              // Duration of jQuery animation
+        sectionSelector: "navbar-menu",    // Class of the section that is interconnected with nav links
         startAt: 110,                     // Stick the menu at XXXpx from the top of the this() (nav container)
         easing: "linear",               // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
-        zindex: 9999,                   // The zindex value to apply to the element: default 9999, other option is "auto"
+        selector: "navbar-link",                  // Selector to which activeClass will be added, either "a" or "li"
         stickyModeClass: "sticky",      // Class that will be applied to 'this' in sticky mode
         unstickyModeClass: "unsticky"   // Class that will be applied to 'this' in non-sticky mode
     });
