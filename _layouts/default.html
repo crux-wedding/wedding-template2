@@ -28,12 +28,214 @@
 </div>
 {% include footer.html %}
 
-<!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>-->
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+
 <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="{{'js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="//cdn.jsdelivr.net/stickynavbar.js/1.3.2/jquery.stickyNavbar.min.js"></script>
+<script type="text/javascript" src="{{'js/kinetic-v5.1.0.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{'js/jquery.countdown.min.js' | prepend: site.baseurl }}"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr_tSMMzACrUJfTuVZM3T5bC4EbC5dR5k&callback=initMap"></script>
+<script type="text/javascript">
+  function initMap() {
+    var mapLocation = {lat: 14.554729, lng: 121.02444519999995};
+    var customMapType = new google.maps.StyledMapType(
+            [
+              {
+                "featureType": "all",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "saturation": 36
+                  },
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 40
+                  }
+                ]
+              },
+              {
+                "featureType": "all",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "visibility": "on"
+                  },
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 16
+                  }
+                ]
+              },
+              {
+                "featureType": "all",
+                "elementType": "labels.icon",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 20
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 17
+                  },
+                  {
+                    "weight": 1.2
+                  }
+                ]
+              },
+              {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 20
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 21
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 17
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 29
+                  },
+                  {
+                    "weight": 0.2
+                  }
+                ]
+              },
+              {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 18
+                  }
+                ]
+              },
+              {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 16
+                  }
+                ]
+              },
+              {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 19
+                  }
+                ]
+              },
+              {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  },
+                  {
+                    "lightness": 17
+                  }
+                ]
+              }
+            ],
+        {
+      name: 'Custom Style'
+    });
+    var customMapTypeId = 'custom_style';
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 15,
+      draggable: true,
+      zoomControl: true,
+      scaleControl: false,
+      scrollwheel: false,
+      center: mapLocation,
+      mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+      }
+    });
+
+    var marker = new google.maps.Marker({
+      position: mapLocation,
+      map: map,
+      center: mapLocation,
+      icon: 'img/map-maker.png'
+    });
+
+    map.mapTypes.set(customMapTypeId, customMapType);
+    map.setMapTypeId(customMapTypeId);
+  }
+</script>
+
 <script type="text/javascript" src="{{'js/home.js' | prepend: site.baseurl }}"></script>
 
 </body>
