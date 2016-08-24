@@ -183,6 +183,7 @@ html,body
       clear: both
 
 #countdown
+  position: relative
   margin: 70px auto
   padding: 30px 0
   .section-header
@@ -201,6 +202,7 @@ html,body
         height: 220px
         width: 220px
         color: white
+        margin: 0 auto
         text-transform: lowercase
         .countdown-name
           display: block
@@ -359,6 +361,23 @@ html,body
     color: black
     text-align: center
 
+@media (max-width: 1440px)
+  #cover
+    .container
+      .intro-text-container
+        .intro-header
+          .into-header-text
+            font-size: 7em
+        .caption
+          margin: 25px 0 40px
+          .intro-caption
+            font-size: 2em
+        .intro-button-container
+          .intro-button
+            font-size: 1.5em
+            padding: 25px 50px
+
+
 @media (max-width: $screen-sm-max)
   #cover
     .container
@@ -369,7 +388,7 @@ html,body
         .caption
           margin: 30px 0 15px
           .intro-caption
-            font-size: 2.5em
+
         .intro-button-container
           .intro-button
             font-size: 1.5em
@@ -396,9 +415,21 @@ html,body
           margin: 0 auto
           float: none !important
 
+  #countdown
+    margin: 0 0 60px
+    padding: 0
+
   #venue
-    .content-container
-      margin: 0 50px 50px
+    height: auto
+    .container-fluid
+      #map
+        height: 500px
+      .venue-container
+        position: relative
+        top: 0
+        transform: none
+        margin: 50px 30px
+        right: 0
 
   #rsvp
     .section-container
@@ -413,7 +444,6 @@ html,body
 
 @media (max-width: 568px)
   #cover
-    height: auto
     .container
       .intro-text-container
         top: 0
@@ -421,7 +451,13 @@ html,body
         padding: 100px 0
         .intro-header
           .into-header-text
-            font-size: 6.3em
+            font-size: 4.5em
+
+  #about
+    .bride-section
+      margin: 30px 0
+    .groom-section
+      margin: 30px 0
 
   #our-story
     .timeline-section
@@ -433,19 +469,13 @@ html,body
           padding-right: 5px
           text-align: left
 
-  #venue
-    .content-container
-      margin: 0
-      border-top: 2px dashed white
-      border-left: none
-      border-right: none
-      border-bottom: 2px dashed white
-      border-radius: 0
-      padding-left: 15px
-      padding-right: 15px
-      .section-content
-        .section-header
-          font-size: 3.5em
+  #countdown
+    #clock
+      .item-list
+        .item-container
+          width: 200px
+          height: 200px
+          padding: 75px 5px
 
   #rsvp
     .section-container
@@ -459,6 +489,14 @@ html,body
         #form-content
           .content-button-container
             max-width: 90%
+
+  #venue
+    .container-fluid
+      .venue-container
+        border-radius: 0
+        border-left: none
+        border-right: none
+        margin: 0
 
 @media (max-width: $screen-xs)
   #cover
