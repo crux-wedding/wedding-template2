@@ -5,16 +5,55 @@ main.init = function(){
     main.onClickIntroButton();
     main.onFormSubmit();
     main.stickyNavbar();
+    main.initCountDown();
 }
 
+main.initCountDown = function(){
+    // var beforeWedding = new Date('2016/04/24 15:01:50');
+    var beforeWedding = new Date('2016/12/05');
+    $('#countdown-day').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-D</span>'));
+        if(event.elapsed){
+            $("#countdown .section-header").text("Forever and Counting");
+        }
+        else{
+            $("#countdown .section-header").text("How long do we have to wait?");
+        }
+    });
+
+    $('#countdown-hour').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-H</span>'));
+    });
+
+    $('#countdown-minute').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-M</span>'));
+    });
+
+    $('#countdown-second').countdown(beforeWedding, {elapse: true}).on('update.countdown', function(event) {
+        var $this = $(this).html(event.strftime('<span class="countdown-number">%-S</span>'));
+    });
+};
+
 main.stickyNavbar = function () {
-    $('#header').stickyNavbar({
-        sectionSelector: "navbar-menu",    // Class of the section that is interconnected with nav links
-        startAt: 110,                     // Stick the menu at XXXpx from the top of the this() (nav container)
-        easing: "linear",               // Easing type if jqueryEffects = true, use jQuery Easing plugin to extend easing types - gsgd.co.uk/sandbox/jquery/easing
-        selector: "navbar-link",                  // Selector to which activeClass will be added, either "a" or "li"
-        stickyModeClass: "sticky",      // Class that will be applied to 'this' in sticky mode
-        unstickyModeClass: "unsticky"   // Class that will be applied to 'this' in non-sticky mode
+    $(function(){
+        var menuOffset = $('#header')[0].offsetTop;
+        $(document).ready(function() {
+            var docScroll = $(document).scrollTop();
+            if(docScroll >= menuOffset) {
+                $('#header').addClass('sticky');
+            } else {
+                $('#header').removeClass('sticky').removeAttr("width");
+            }
+        });
+
+        $(window).on('scroll',function(){
+            var docScroll = $(document).scrollTop();
+            if(docScroll >= menuOffset) {
+                $('#header').addClass('sticky');
+            } else {
+                $('#header').removeClass('sticky').removeAttr("width");
+            }
+        })
     });
 }
 
@@ -127,37 +166,14 @@ main.onNavbarScroll = function(){
     if ($(document).width() <= 991) {
         $('nav').addClass('navbar-shrink');
     }
-}
+};
 
 main.onIconTransition = function() {
     $('#icon-transition').on('click', function () {
         $(this).toggleClass('open');
     });
-}
+};
 
-main.initCountDown = function(){
-    $('.right-section').final_countdown({
-        start: new Date("July 14, 2016 12:00:00").getTime() / 1000,
-        end: new Date("September 22, 2016 2:00:00").getTime() / 1000,
-        now: new Date().getTime() / 1000,
-        seconds: {
-            borderColor: 'white',
-            borderWidth: '2'
-        },
-        minutes: {
-            borderColor: 'white',
-            borderWidth: '2'
-        },
-        hours: {
-            borderColor: 'white',
-            borderWidth: '2'
-        },
-        days: {
-            borderColor: 'white',
-            borderWidth: '2'
-        }
-    });
-}
 
 $(function(){
     main.init();
