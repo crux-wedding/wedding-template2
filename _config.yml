@@ -51,5 +51,14 @@ wedding-details:
     ceremony-time: "2:00 PM"
     ceremony-name: "Palazo Verde"
     ceremony-location: "Daang Reyna, Vista City, Las Pinas, Philippines"
-    
+
+
+gallery:
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+  - image: 'gallery.jpg'
+
     
