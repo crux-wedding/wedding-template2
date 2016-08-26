@@ -6,14 +6,17 @@
             <h1 class="stylized section-header">Venue</h1>
             <ul>
                 <li>
-                    <b>{{ site.wedding-details.ceremony.ceremony-day }} / {{ site.wedding-details.ceremony.ceremony-date
-                        }} / {{ site.wedding-details.ceremony.ceremony-time }} </b>
+                    <li>
+                    <b>Location:</b><span>{{ site.wedding-details.ceremony.ceremony-location }}</span>
                 </li>
                 <li>
-                    <b>{{ site.wedding-details.ceremony.ceremony-name }}</b>
+                    <a href="http://goo.gl/u2xMqE" target="_blank">Get Directions</a>
                 </li>
                 <li>
-                    <b>{{ site.wedding-details.ceremony.ceremony-location }}</b>
+                    <li>
+                        <b>Date:</b><span>{{ site.wedding-details.ceremony.ceremony-date }} ({{ site.wedding-details.ceremony.ceremony-day }})</span>
+                    </li>
+                    <li><b>Time:</b><span>{{ site.wedding-details.ceremony.ceremony-time }}</span></li>
                 </li>
             </ul>
 
@@ -22,7 +25,7 @@
             <h1 class="stylized section-header">What to wear?</h1>
             <ul>
                 <li>
-                    <b>Wear anything pastel</b>
+                    <b id="detail">Wear anything pastel</b>
                 </li>
             </ul>
         </div>

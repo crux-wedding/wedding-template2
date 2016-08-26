@@ -37,7 +37,7 @@
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr_tSMMzACrUJfTuVZM3T5bC4EbC5dR5k&callback=initMap"></script>
 <script type="text/javascript">
-  function initMap() {
+  window.initMap = function() {
     var mapLocation = {lat: 14.554729, lng: 121.02444519999995};
     var customMapType = new google.maps.StyledMapType(
             [
@@ -213,7 +213,7 @@
     var customMapTypeId = 'custom_style';
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
+      zoom: 10,
       draggable: true,
       zoomControl: true,
       scaleControl: false,
